@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 앱 전체에 대해 cleartext HTTP 허용 -->
+    <base-config cleartextTrafficPermitted="true" />
+    <!-- localhost(10.0.2.2) 에 대해서만 허용하려면 이렇게도 설정 가능 -->
+    <!--
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+    -->
+</network-security-config>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/overlay_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진 찍기"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="갤러리 선택"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp" />
+
+        <RadioGroup
+            android:id="@+id/function_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/radio_function_ocr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책 제목 추출" />
+
+            <RadioButton
+                android:id="@+id/radio_function_rearrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책 재배치" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnProcess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="처리"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+            <EditText
+                android:id="@+id/etSearchQuery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="보유 도서 검색" />
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검색"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnExportCsv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현재 책장 목록 CSV로 내보내기"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 책장 목록"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_my_bookshelves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:background="#ECECEC"
+            android:padding="8dp"/>
+        <GridLayout
+            android:id="@+id/grid_shelf_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btnUploadShelf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="책장 등록"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

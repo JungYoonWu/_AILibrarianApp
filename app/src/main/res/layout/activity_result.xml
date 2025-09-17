@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ─── 결과들을 동적으로 넣을 컨테이너 ─── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="8dp">
+
+        <!-- 여기에 반복해서 TextView 블록들을 addView 합니다 -->
+        <LinearLayout
+            android:id="@+id/results_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 실제 결과는 MainActivity→ResultActivity 로 전달된 값으로
+                 동적으로 java 코드에서 addView 해 줍니다. -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 홈으로 돌아가기 버튼 -->
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="홈으로 돌아가기" />
+
+</LinearLayout>
